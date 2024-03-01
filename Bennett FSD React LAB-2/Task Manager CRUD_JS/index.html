@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+
+    <script src="assets/javascripts/controller.js"></script>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <h1>Task Manager CRUD</h1>
+                </div>
+                <nav id="main-nav">
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="task-input-section">
+        <div class="container">
+            <div class="task-wrapper">
+                <div class="task-title">
+                    <label for="box-1">Enter your task</label>
+                    <input type="text" placeholder="Enter your task title" id="box-1">
+                </div>
+                <div class="task-desc">
+                    <label for="box-2">Enter task description</label>
+                    <textarea id="box-2" cols="0" rows="0" placeholder="Enter your task desc"></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="add" class="btn">Add Task</button>
+                <button id="delete" class="btn">Delete Task</button>
+                <button id="update" class="btn">Update Task</button>
+                <button id="save" class="btn">Save Task</button>
+                <button id="load" class="btn">Load Task</button>
+                <button id="sort" class="btn">Sort Task</button>
+                <button id="save" class="btn">Search Task</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="task-section">
+        <div class="container">
+            <table id="task-table">
+                <tr>
+                    <th>Task ID</th>
+                    <th>Task Title</th>
+                    <th>Task Description</th>
+                    <th>Task Created</th>
+                    <th>Task Status</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+</body>
+</html>

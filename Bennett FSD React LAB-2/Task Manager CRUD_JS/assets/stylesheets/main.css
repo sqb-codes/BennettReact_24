@@ -1,0 +1,56 @@
+.container {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+#header {
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: #fff;
+    border: none;
+}
+
+.btn:hover {
+    background-color: red;
+}
+
+#task-input-section {
+    margin-bottom: 30px;
+}
+
+.task-wrapper {
+    margin-bottom: 40px;
+}
+
+.task-title {
+    margin-bottom: 30px;
+}
+
+.task-wrapper label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.task-wrapper :where(input, textarea) {
+    width: 100%;
+}
+
+.task-wrapper input {
+    height: 40px;
+}
+
+.task-wrapper textarea {
+    height: 80px;
+    resize: none;
+}
+
+#task-table {
+    width: 100%;
+    border: 1px solid;
+}
