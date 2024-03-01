@@ -53,4 +53,12 @@
 #task-table {
     width: 100%;
     border: 1px solid;
+    text-align: left;
+}
+
+#task-table tr :where(td, th) {
+    padding: 10px;
+}
+#task-table tr:nth-child(odd) {
+    background-color: lightgray;
 }
