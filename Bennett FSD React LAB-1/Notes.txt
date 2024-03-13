@@ -1,0 +1,6 @@
+1. Create React Native Project
+- expo init
+
+Alternative (recommended)
+- npx create-expo-app appName
+
