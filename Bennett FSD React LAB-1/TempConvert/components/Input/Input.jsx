@@ -13,7 +13,7 @@ export function Input({defaultValue, onChange, unit}) {
                     onChange(text);
                 }}
             />
-            <Text style={styles.unit}>C</Text>
+            <Text style={styles.unit}>{unit}</Text>
         </View>
     )
 }
