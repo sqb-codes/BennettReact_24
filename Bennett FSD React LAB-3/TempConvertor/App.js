@@ -4,12 +4,15 @@ import { Input } from './components/Input/Input';
 import { DisplayTemp } from './components/DisplayTemp/DisplayTemp';
 import city from "./assets/city.jpeg";
 import { useState } from 'react';
-import {convertTemp, temperature} from "./utils/temperature";
+import {convertTemp, toggleUnit} from "./utils/temperature";
+import { ToggleButton } from './components/ToggleButton/ToggleButton';
 
 
 export default function App() {
 
     const [inputValue, setInputValue] = useState(0);
+    const [currentUnit, setCurrentUnit] = useState("F");
+    const oppositeUnit = toggleUnit(currentUnit);
 
     function getConvertedTemp() {
       if(isNaN(inputValue)) {
@@ -17,7 +20,7 @@ export default function App() {
       }
       else {
         // toFixed - show 1 digit after decimal
-        return convertTemp(inputValue, "C").toFixed(1);
+        return convertTemp(inputValue, oppositeUnit).toFixed(1);
       }
       
     }
@@ -26,7 +29,7 @@ export default function App() {
       <ImageBackground source={city} style={styles.background}>
         <View style={styles.container}>
           <View>
-            <DisplayTemp unit={"C"} temperature={getConvertedTemp()}/>
+            <DisplayTemp unit={currentUnit} temperature={getConvertedTemp()}/>
           </View>
 
           <View style={styles.inputWrapper}>
@@ -34,7 +37,11 @@ export default function App() {
           </View>
 
           <View>
-            <Text>Toggle Temperature Unit</Text>
+            {/* <Text>Toggle Temperature Unit</Text> */}
+            <ToggleButton onPress={() => {
+              setCurrentUnit(oppositeUnit);
+            }}
+            unit={oppositeUnit}/>
           </View>
         </View>
       </ImageBackground>      

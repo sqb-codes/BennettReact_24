@@ -4,7 +4,7 @@ import { styles } from "./DisplayTemp.style";
 export function DisplayTemp({temperature, unit}) {
     return (
         <Text style={styles.tempText}>
-            {temperature} {unit}
+            {temperature} °{unit}
         </Text>
     )
 }
